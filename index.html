@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portafolio de Fidel Rosas - Informática, UDONE." />
+  <meta name="description" content="Portafolio académico de Fidel Rosas - Informática, UDONE." />
   <title>Fidel Rosas | Portafolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -13,8 +13,9 @@
       <a href="#inicio" class="logo">Rex<span>.dev</span></a>
       <nav aria-label="Navegación principal">
         <ul class="nav-links">
-          <li><a href="#perfil">Perfil</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#github">GitHub</a></li>
+          <li><a href="#tecnologias">Stack</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -22,40 +23,42 @@
   </header>
 
   <main>
-    <!-- Inicio -->
+    <!-- Hero -->
     <section id="inicio" class="hero">
       <div class="container hero-content">
         <span class="badge">Informática • UDONE</span>
         <h1>Hola, soy <span class="highlight">Fidel Rosas</span> <small>(Rex)</small></h1>
         <p class="hero-desc">
           Estudiante de Informática en la Universidad de Oriente, Núcleo Nueva Esparta.
-          Página básica de presentación para la asignatura, vinculada a mi cuenta de GitHub.
+          Este sitio reúne mi perfil actual, las tecnologías con las que he tenido contacto
+          y el inicio de mi espacio en GitHub.
         </p>
         <div class="hero-actions">
-          <a href="https://github.com/RexRoss" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver GitHub</a>
+          <a href="#github" class="btn btn-primary">Ver GitHub</a>
           <a href="#contacto" class="btn btn-secondary">Contacto</a>
         </div>
       </div>
     </section>
 
-    <!-- Perfil -->
-    <section id="perfil" class="section">
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="section">
       <div class="container">
-        <h2 class="section-title">Perfil</h2>
+        <h2 class="section-title">Sobre mí</h2>
         <div class="about-grid">
           <div class="about-card">
-            <h3>Situación Actual</h3>
+            <h3>Etapa Actual</h3>
             <p>
-              Estudiante de <strong>Informática en la UDONE</strong>. He probado distintos lenguajes
-              y herramientas a lo largo de la carrera, sin mayor pretensión de mostrar un catálogo
-              público de proyectos.
+              Curso estudios en la <strong>Universidad de Oriente, Núcleo Nueva Esparta (UDONE)</strong>.
+              A lo largo de mi paso por la carrera he conocido distintos lenguajes y herramientas,
+              y actualmente estoy empezando a ordenar y centralizar mis cosas en GitHub.
             </p>
           </div>
           <div class="about-card">
-            <h3>GitHub</h3>
+            <h3>Enfoque</h3>
             <p>
-              Cuenta en etapa inicial, usada principalmente para alojar este sitio y mantener
-              un registro básico cuando hace falta.
+              Prefiero mostrar las cosas tal como están hoy: sin inflar un historial que todavía
+              no tengo organizado en repositorios, pero con disposición para ir sumando código
+              y prácticas conforme avance.
             </p>
           </div>
         </div>
@@ -65,41 +68,110 @@
     <!-- GitHub -->
     <section id="github" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">GitHub</h2>
-        <p class="section-subtitle">Enlace directo a mi perfil y repositorio actual.</p>
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">GitHub</h2>
+            <p class="section-subtitle">
+              Mi cuenta en GitHub está en una etapa inicial, con este portafolio como uno de los primeros pasos visibles.
+            </p>
+          </div>
+
+          <div class="filter-bar" role="group" aria-label="Filtrar tarjetas">
+            <button class="filter-btn active" data-filter="todos">Todo</button>
+            <button class="filter-btn" data-filter="repos">Perfil y Repos</button>
+            <button class="filter-btn" data-filter="enfoque">Enfoque Actual</button>
+          </div>
+        </div>
 
         <div class="projects-grid" id="projects-container">
-          <article class="project-card">
+          <article class="project-card" data-category="repos">
             <div class="project-top">
               <span class="project-tag">GitHub</span>
-              <span class="project-context">Perfil</span>
+              <span class="project-context">Cuenta personal</span>
             </div>
-            <h3>RexRoss</h3>
+            <h3>Perfil RexRoss</h3>
             <p class="project-desc">
-              Perfil principal en GitHub donde se encuentra alojado este portafolio desplegado en Vercel.
+              Espacio donde estoy comenzando a reunir mis repositorios y avances en control de versiones.
             </p>
             <div class="tech-list">
-              <span>HTML</span>
-              <span>CSS</span>
+              <span>Git</span>
+              <span>GitHub</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/RexRoss" target="_blank" rel="noopener noreferrer">Ir a GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="repos">
+            <div class="project-top">
+              <span class="project-tag">Web</span>
+              <span class="project-context">En Vercel</span>
+            </div>
+            <h3>Portafolio Web</h3>
+            <p class="project-desc">
+              Página sencilla hecha con HTML, CSS y JavaScript, vinculada a GitHub y desplegada en Vercel.
+            </p>
+            <div class="tech-list">
+              <span>HTML5</span>
+              <span>CSS3</span>
               <span>JavaScript</span>
               <span>Vercel</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/RexRoss" target="_blank" rel="noopener noreferrer">Abrir en GitHub →</a>
+              <a href="https://github.com/RexRoss?tab=repositories" target="_blank" rel="noopener noreferrer">Ver repositorios →</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="enfoque">
+            <div class="project-top">
+              <span class="project-tag">Trayectoria</span>
+              <span class="project-context">Sin historial subido aún</span>
+            </div>
+            <h3>Trabajos y Prácticas Previas</h3>
+            <p class="project-desc">
+              Aunque no cuento con repositorios antiguos subidos ni respaldados en GitHub, he trabajado con distintos lenguajes y herramientas durante la carrera.
+            </p>
+            <div class="tech-list">
+              <span>Prácticas de clase</span>
+              <span>En organización</span>
+            </div>
+            <div class="project-links">
+              <a href="#tecnologias">Ver herramientas →</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Tecnologías -->
+    <section id="tecnologias" class="section">
+      <div class="container">
+        <h2 class="section-title">Herramientas y Tecnologías</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Lenguajes</h3>
+            <p>JavaScript, TypeScript, GDScript, Python, SQL, C++, Haskell, Racket, HTML5, CSS3</p>
+          </div>
+          <div class="skill-group">
+            <h3>Backend y Bases de Datos</h3>
+            <p>Node.js, NestJS, PostgreSQL, pgAdmin 4, APIs REST, Postman</p>
+          </div>
+          <div class="skill-group">
+            <h3>Redes, Hardware y Otros</h3>
+            <p>Git, GitHub, Cisco Packet Tracer, ESP32, Godot 4, Linux (eBPF)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contacto -->
-    <section id="contacto" class="section">
+    <section id="contacto" class="section section-alt">
       <div class="container contact-box">
         <h2 class="section-title">Contacto</h2>
-        <p id="email-display">rex.ander.ross10@gmail.com</p>
+        <p id="email-display">rexgamervnzla13@gmail.com</p>
         <div class="contact-links">
           <a href="https://github.com/RexRoss" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub</a>
-          <a href="mailto:rex.ander.ross10@gmail.com" class="btn btn-secondary">Abrir Correo</a>
+          <a href="mailto:rexgamervnzla13@gmail.com" class="btn btn-secondary">Abrir Correo</a>
           <button type="button" id="copy-email-btn" class="btn btn-secondary">Copiar Correo</button>
         </div>
       </div>
@@ -108,7 +180,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p>© <span id="year"></span> Fidel Rosas</p>
+      <p>© <span id="year"></span> Fidel Rosas — Desplegado en Vercel.</p>
     </div>
   </footer>
 
