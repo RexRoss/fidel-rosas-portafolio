@@ -27,6 +27,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Mostrar nombre al tocar un logo en móvil / pantallas táctiles
+  const logoItems = document.querySelectorAll(".tech-logo-item");
+
+  logoItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const alreadyActive = item.classList.contains("active");
+      logoItems.forEach((other) => other.classList.remove("active"));
+      if (!alreadyActive) {
+        item.classList.add("active");
+      }
+    });
+  });
+
+  document.addEventListener("click", () => {
+    logoItems.forEach((item) => item.classList.remove("active"));
+  });
+
   // Copiar correo al portapapeles
   const copyBtn = document.getElementById("copy-email-btn");
   const emailText = document.getElementById("email-display");
