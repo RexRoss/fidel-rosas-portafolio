@@ -3,24 +3,257 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Portafolio</title>
+  <meta name="description" content="Portafolio académico y técnico de Fidel Andrés Rosas Millán (Rex) - Ingeniería de Sistemas, UDONE." />
+  <title>Fidel Rosas (Rex) | Portafolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Hola, soy [Tu Nombre]</h1>
-    <p>Desarrollador / Proyectos / Contacto</p>
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#inicio" class="logo">Rex<span>.dev</span></a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#tecnologias">Stack</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section id="proyectos">
-      <h2>Proyectos</h2>
-      <article>
-        <h3>Proyecto 1</h3>
-        <p>Descripción breve, tecnologías usadas y enlace a demo o código.</p>
-      </article>
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div class="container hero-content">
+        <span class="badge">Ingeniería de Sistemas • UDONE</span>
+        <h1>Hola, soy <span class="highlight">Fidel Rosas</span> <small>(Rex)</small></h1>
+        <p class="hero-desc">
+          Estudiante de Ingeniería de Sistemas enfocando mi aprendizaje en desarrollo web backend y frontend, 
+          arquitectura de redes, bases de datos relacionales, sistemas embebidos y desarrollo de videojuegos.
+        </p>
+        <div class="hero-actions">
+          <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+          <a href="#contacto" class="btn btn-secondary">Contacto y GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="section">
+      <div class="container">
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Perfil Académico y Técnico</h3>
+            <p>
+              Actualmente curso estudios en la <strong>Universidad de Oriente, Núcleo Nueva Esparta (UDONE)</strong>. 
+              A lo largo de la carrera he trabajado en equipos de desarrollo y laboratorios prácticos aplicando 
+              metodologías de ingeniería de software, análisis de redes y programación funcional e imperativa.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3>Enfoque de Trabajo</h3>
+            <p>
+              Me interesa construir soluciones funcionales desde la arquitectura de datos y la lógica del servidor 
+              hasta la interfaz de usuario, documentando cada entrega y utilizando control de versiones con Git.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Proyectos y Prácticas</h2>
+            <p class="section-subtitle">Selección de trabajos universitarios, prototipos y desarrollos personales.</p>
+          </div>
+
+          <!-- Filtros -->
+          <div class="filter-bar" role="group" aria-label="Filtrar proyectos por categoría">
+            <button class="filter-btn active" data-filter="todos">Todos</button>
+            <button class="filter-btn" data-filter="web">Web / Backend</button>
+            <button class="filter-btn" data-filter="redes-iot">Redes e IoT</button>
+            <button class="filter-btn" data-filter="juegos">Videojuegos</button>
+            <button class="filter-btn" data-filter="documentacion">Análisis / Docs</button>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projects-container">
+          <!-- Proyecto 1 -->
+          <article class="project-card" data-category="web">
+            <div class="project-top">
+              <span class="project-tag">Web / Backend</span>
+              <span class="project-context">Proyecto Grupal</span>
+            </div>
+            <h3>API de Gestión de Tareas</h3>
+            <p class="project-desc">
+              Aplicación backend desarrollada en equipo para administrar tareas, usuarios y estados mediante arquitectura modular y persistencia relacional.
+            </p>
+            <p class="project-role"><strong>Aporte:</strong> Diseño de endpoints REST, validación de rutas y pruebas de integración.</p>
+            <div class="tech-list">
+              <span>NestJS</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+              <span>Postman</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/TU-USUARIO" target="_blank" rel="noopener noreferrer">Código en GitHub →</a>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project-card" data-category="redes-iot">
+            <div class="project-top">
+              <span class="project-tag">Redes e IoT</span>
+              <span class="project-context">Prototipo Académico</span>
+            </div>
+            <h3>Desalinizador Solar con Telemetría</h3>
+            <p class="project-desc">
+              Prototipo a escala construido con materiales locales e integrado con microcontrolador para medir la calidad y salinidad del agua en tiempo real.
+            </p>
+            <p class="project-role"><strong>Aporte:</strong> Integración del microcontrolador, lectura de sensores TDS y adquisición de datos.</p>
+            <div class="tech-list">
+              <span>ESP32</span>
+              <span>Sensores TDS</span>
+              <span>C++ / Arduino</span>
+              <span>Telemetría</span>
+            </div>
+            <div class="project-links">
+              <a href="#contacto">Solicitar documentación →</a>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="project-card" data-category="redes-iot">
+            <div class="project-top">
+              <span class="project-tag">Redes</span>
+              <span class="project-context">Laboratorio de Redes</span>
+            </div>
+            <h3>Simulación de Alta Disponibilidad (HSRP)</h3>
+            <p class="project-desc">
+              Topología de red redundante diseñada para garantizar conmutación automática ante fallos de gateway en entornos empresariales simulados.
+            </p>
+            <p class="project-role"><strong>Aporte:</strong> Configuración de routers activos/standby, prioridades y pruebas de failover.</p>
+            <div class="tech-list">
+              <span>Cisco Packet Tracer</span>
+              <span>HSRP</span>
+              <span>Enrutamiento IP</span>
+            </div>
+            <div class="project-links">
+              <a href="#contacto">Ver esquema de red →</a>
+            </div>
+          </article>
+
+          <!-- Proyecto 4 -->
+          <article class="project-card" data-category="juegos">
+            <div class="project-top">
+              <span class="project-tag">Videojuegos</span>
+              <span class="project-context">Desarrollo Propio</span>
+            </div>
+            <h3>Hermanos Luchadores (1vs1)</h3>
+            <p class="project-desc">
+              Videojuego de lucha en plataformas 1vs1 con detección de hitboxes, físicas de combate y generación procedural de sprites pixel art, portado de navegador a motor dedicado.
+            </p>
+            <p class="project-role"><strong>Aporte:</strong> Lógica de combate, sistema de colisiones, portabilidad de arquitectura y renderizado.</p>
+            <div class="tech-list">
+              <span>Godot 4</span>
+              <span>GDScript</span>
+              <span>JavaScript</span>
+              <span>HTML5 Canvas</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/TU-USUARIO" target="_blank" rel="noopener noreferrer">Repositorio →</a>
+            </div>
+          </article>
+
+          <!-- Proyecto 5 -->
+          <article class="project-card" data-category="documentacion">
+            <div class="project-top">
+              <span class="project-tag">Análisis / Docs</span>
+              <span class="project-context">Equipo Rosa • UDONE</span>
+            </div>
+            <h3>Informe de Factibilidad: Ajedrez Virtual</h3>
+            <p class="project-desc">
+              Estudio técnico, operativo y económico para el desarrollo de una plataforma de ajedrez virtual, gestionado mediante flujo colaborativo en Git.
+            </p>
+            <p class="project-role"><strong>Aporte:</strong> Redacción técnica en Markdown, análisis de requerimientos y control de versiones en rama grupal.</p>
+            <div class="tech-list">
+              <span>Markdown</span>
+              <span>Git / GitHub</span>
+              <span>Ingeniería de Software</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/TU-USUARIO" target="_blank" rel="noopener noreferrer">Ver informe →</a>
+            </div>
+          </article>
+
+          <!-- Proyecto 6 (Plantilla editable para agregar más) -->
+          <article class="project-card" data-category="web">
+            <div class="project-top">
+              <span class="project-tag">Datos / Scripting</span>
+              <span class="project-context">Proyecto Personal</span>
+            </div>
+            <h3>Gestor de Estadísticas y Rankings de Torneos</h3>
+            <p class="project-desc">
+              Sistema de registro histórico para más de 30 ediciones competitivas, con cálculo automático de tablas de posiciones, enfrentamientos directos y criterios de clasificación.
+            </p>
+            <p class="project-role"><strong>Aporte:</strong> Modelado de datos, reglas de desempate y automatización de rankings.</p>
+            <div class="tech-list">
+              <span>JavaScript</span>
+              <span>SQL</span>
+              <span>Lógica de Clasificación</span>
+            </div>
+            <div class="project-links">
+              <a href="#contacto">Más detalles →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tecnologías -->
+    <section id="tecnologias" class="section">
+      <div class="container">
+        <h2 class="section-title">Herramientas y Tecnologías</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Lenguajes</h3>
+            <p>JavaScript, TypeScript, GDScript, SQL, C++, Haskell, Racket, HTML5, CSS3</p>
+          </div>
+          <div class="skill-group">
+            <h3>Backend y Bases de Datos</h3>
+            <p>Node.js, NestJS, PostgreSQL, pgAdmin 4, APIs REST, Postman</p>
+          </div>
+          <div class="skill-group">
+            <h3>Redes, Hardware y Otros</h3>
+            <p>Git, GitHub, Cisco Packet Tracer, ESP32, Godot 4, Linux (eBPF)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section section-alt">
+      <div class="container contact-box">
+        <h2 class="section-title">Contacto</h2>
+        <p>¿Quieres revisar el código fuente de alguno de estos proyectos o colaborar en una entrega?</p>
+        <div class="contact-links">
+          <a href="https://github.com/TU-USUARIO" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub</a>
+          <a href="mailto:tu-correo@ejemplo.com" class="btn btn-secondary">Enviar Correo</a>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Fidel Andrés Rosas Millán (Rex) — Desplegado en Vercel.</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
