@@ -1,13 +1,13 @@
 :root {
-  --bg: #0b0f19;
-  --bg-alt: #111827;
-  --card: #161f33;
-  --border: #26324d;
-  --text: #f3f4f6;
-  --text-muted: #9ca3af;
-  --accent: #3b82f6;
-  --accent-hover: #2563eb;
-  --tag-bg: rgba(59, 130, 246, 0.14);
+  --fondo: #0b0f19;
+  --fondo-alt: #111827;
+  --tarjeta: #161f33;
+  --borde: #26324d;
+  --texto: #f3f4f6;
+  --texto-suave: #9ca3af;
+  --acento: #3b82f6;
+  --acento-hover: #2563eb;
+  --fondo-etiqueta: rgba(59, 130, 246, 0.14);
 }
 
 * {
@@ -22,72 +22,72 @@ html {
 
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: var(--fondo);
+  color: var(--texto);
   line-height: 1.6;
 }
 
-.container {
+.contenedor {
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Navbar */
-.navbar {
+/* Barra superior */
+.barra-superior {
   position: sticky;
   top: 0;
   z-index: 100;
   background: rgba(11, 15, 25, 0.9);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--borde);
 }
 
-.nav-content {
+.barra-contenido {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 64px;
 }
 
-.logo {
+.marca {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text);
+  color: var(--texto);
   text-decoration: none;
 }
 
-.logo span {
-  color: var(--accent);
+.marca span {
+  color: var(--acento);
 }
 
-.nav-links {
+.enlaces-nav {
   display: flex;
   gap: 1.5rem;
   list-style: none;
 }
 
-.nav-links a {
-  color: var(--text-muted);
+.enlaces-nav a {
+  color: var(--texto-suave);
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.2s;
 }
 
-.nav-links a:hover {
-  color: var(--text);
+.enlaces-nav a:hover {
+  color: var(--texto);
 }
 
-/* Hero */
-.hero {
+/* Portada */
+.portada {
   padding: 5rem 0 4rem;
 }
 
-.badge {
+.etiqueta-rol {
   display: inline-block;
   padding: 0.35rem 0.85rem;
-  background: var(--tag-bg);
-  color: var(--accent);
+  background: var(--fondo-etiqueta);
+  color: var(--acento);
   border: 1px solid rgba(59, 130, 246, 0.3);
   border-radius: 999px;
   font-size: 0.85rem;
@@ -95,36 +95,30 @@ body {
   margin-bottom: 1rem;
 }
 
-.hero h1 {
+.portada h1 {
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
-.hero h1 small {
-  font-size: 1.25rem;
-  color: var(--text-muted);
-  font-weight: 500;
+.resaltado {
+  color: var(--acento);
 }
 
-.highlight {
-  color: var(--accent);
-}
-
-.hero-desc {
+.portada-texto {
   max-width: 680px;
-  color: var(--text-muted);
+  color: var(--texto-suave);
   font-size: 1.05rem;
   margin-bottom: 2rem;
 }
 
-.hero-actions {
+.acciones-portada {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-/* Buttons */
+/* Botones */
 .btn {
   display: inline-block;
   padding: 0.7rem 1.35rem;
@@ -136,86 +130,93 @@ body {
   transition: background 0.2s, border-color 0.2s;
 }
 
-.btn-primary {
-  background: var(--accent);
+.btn-principal {
+  background: var(--acento);
   color: #fff;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--acento);
 }
 
-.btn-primary:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
+.btn-principal:hover {
+  background: var(--acento-hover);
+  border-color: var(--acento-hover);
 }
 
-.btn-secondary {
+.btn-secundario {
   background: transparent;
-  color: var(--text);
-  border: 1px solid var(--border);
+  color: var(--texto);
+  border: 1px solid var(--borde);
 }
 
-.btn-secondary:hover {
-  border-color: var(--accent);
+.btn-secundario:hover {
+  border-color: var(--acento);
 }
 
-/* Sections */
-.section {
+/* Secciones */
+.seccion {
   padding: 4rem 0;
 }
 
-.section-alt {
-  background: var(--bg-alt);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+.seccion-alterna {
+  background: var(--fondo-alt);
+  border-top: 1px solid var(--borde);
+  border-bottom: 1px solid var(--borde);
 }
 
-.section-title {
+.titulo-seccion {
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
 }
 
-.section-subtitle {
-  color: var(--text-muted);
+.subtitulo-seccion {
+  color: var(--texto-suave);
   margin-bottom: 1.5rem;
 }
 
-/* About */
-.about-grid {
+/* Grillas */
+.grilla-dos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
 
-.about-card, .skill-group {
-  background: var(--card);
-  border: 1px solid var(--border);
+.grilla-tres {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tarjeta-info {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
   border-radius: 12px;
   padding: 1.5rem;
 }
 
-.about-card h3, .skill-group h3 {
+.tarjeta-info h3 {
   margin-bottom: 0.85rem;
   font-size: 1.15rem;
-  color: var(--text);
+  color: var(--texto);
 }
 
-.about-card p {
-  color: var(--text-muted);
+.tarjeta-info p {
+  color: var(--texto-suave);
   font-size: 0.95rem;
 }
 
-/* Filter Bar */
-.filter-bar {
+/* Filtros */
+.barra-filtros {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 2rem;
 }
 
-.filter-btn {
-  background: var(--card);
-  color: var(--text-muted);
-  border: 1px solid var(--border);
+.boton-filtro {
+  background: var(--tarjeta);
+  color: var(--texto-suave);
+  border: 1px solid var(--borde);
   padding: 0.45rem 0.95rem;
   border-radius: 8px;
   font-size: 0.88rem;
@@ -223,23 +224,23 @@ body {
   transition: all 0.2s;
 }
 
-.filter-btn:hover,
-.filter-btn.active {
-  background: var(--accent);
+.boton-filtro:hover,
+.boton-filtro.activo {
+  background: var(--acento);
   color: #fff;
-  border-color: var(--accent);
+  border-color: var(--acento);
 }
 
-/* Projects Grid */
-.projects-grid {
+/* Tarjetas de proyectos / repos */
+.grilla-proyectos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   gap: 1.5rem;
 }
 
-.project-card {
-  background: var(--card);
-  border: 1px solid var(--border);
+.tarjeta-proyecto {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
   border-radius: 12px;
   padding: 1.5rem;
   display: flex;
@@ -248,16 +249,16 @@ body {
   transition: transform 0.2s, border-color 0.2s;
 }
 
-.project-card:hover {
+.tarjeta-proyecto:hover {
   transform: translateY(-3px);
-  border-color: var(--accent);
+  border-color: var(--acento);
 }
 
-.project-card.hidden {
+.tarjeta-proyecto.oculto {
   display: none;
 }
 
-.project-top {
+.tarjeta-encabezado {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -265,88 +266,75 @@ body {
   gap: 0.5rem;
 }
 
-.project-tag {
-  background: var(--tag-bg);
-  color: var(--accent);
+.etiqueta-tipo {
+  background: var(--fondo-etiqueta);
+  color: var(--acento);
   font-size: 0.78rem;
   font-weight: 600;
   padding: 0.25rem 0.6rem;
   border-radius: 6px;
 }
 
-.project-context {
+.texto-contexto {
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: var(--texto-suave);
 }
 
-.project-card h3 {
+.tarjeta-proyecto h3 {
   font-size: 1.2rem;
   margin-bottom: 0.6rem;
 }
 
-.project-desc {
-  color: var(--text-muted);
+.tarjeta-descripcion {
+  color: var(--texto-suave);
   font-size: 0.93rem;
   margin-bottom: 0.85rem;
 }
 
-.project-role {
-  font-size: 0.88rem;
-  color: var(--text);
-  margin-bottom: 1rem;
-}
-
-.tech-list {
+.lista-tecnologias {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
   margin-bottom: 1.2rem;
 }
 
-.tech-list span {
+.lista-tecnologias span {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border);
-  color: var(--text-muted);
+  border: 1px solid var(--borde);
+  color: var(--texto-suave);
   font-size: 0.78rem;
   padding: 0.2rem 0.55rem;
   border-radius: 6px;
 }
 
-.project-links a {
-  color: var(--accent);
+.enlace-tarjeta a {
+  color: var(--acento);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
 }
 
-.project-links a:hover {
+.enlace-tarjeta a:hover {
   text-decoration: underline;
 }
 
-/* Skills & Logos */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.logo-grid {
+/* Logos y tooltip */
+.grilla-logos {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
 }
 
-.tech-logo-item {
+.item-logo {
   position: relative;
   width: 52px;
   height: 52px;
   min-width: 52px;
   padding: 0 0.45rem;
   border-radius: 10px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--borde);
   background: rgba(11, 15, 25, 0.75);
-  color: var(--text);
+  color: var(--texto);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -354,38 +342,38 @@ body {
   transition: transform 0.2s, border-color 0.2s, background 0.2s;
 }
 
-.tech-logo-item:has(.logo-fallback) {
+.item-logo:has(.texto-logo-alterno) {
   width: auto;
 }
 
-.tech-logo-item i {
+.item-logo i {
   font-size: 1.85rem;
   line-height: 1;
 }
 
-.logo-fallback {
+.texto-logo-alterno {
   font-size: 0.76rem;
   font-weight: 700;
-  color: var(--text-muted);
+  color: var(--texto-suave);
   white-space: nowrap;
 }
 
-.tech-logo-item:hover,
-.tech-logo-item.active {
+.item-logo:hover,
+.item-logo.activo {
   transform: translateY(-2px);
-  border-color: var(--accent);
+  border-color: var(--acento);
   background: rgba(59, 130, 246, 0.12);
 }
 
-.tech-logo-item::after {
-  content: attr(data-name);
+.item-logo::after {
+  content: attr(data-nombre);
   position: absolute;
   bottom: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%) translateY(4px);
   background: #050811;
-  color: var(--text);
-  border: 1px solid var(--border);
+  color: var(--texto);
+  border: 1px solid var(--borde);
   padding: 0.25rem 0.55rem;
   border-radius: 6px;
   font-size: 0.76rem;
@@ -398,38 +386,38 @@ body {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
 }
 
-.tech-logo-item:hover::after,
-.tech-logo-item.active::after {
+.item-logo:hover::after,
+.item-logo.activo::after {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
 
-/* Contact & Footer */
-.contact-box {
+/* Contacto y pie */
+.caja-contacto {
   text-align: center;
 }
 
-.contact-box p {
-  color: var(--text-muted);
+.caja-contacto p {
+  color: var(--texto-suave);
   margin-bottom: 1.5rem;
 }
 
-.contact-links {
+.enlaces-contacto {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-.footer {
+.pie-pagina {
   padding: 2rem 0;
   text-align: center;
-  color: var(--text-muted);
+  color: var(--texto-suave);
   font-size: 0.88rem;
 }
 
 @media (max-width: 600px) {
-  .nav-links {
+  .enlaces-nav {
     gap: 0.9rem;
     font-size: 0.85rem;
   }

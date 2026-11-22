@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portafolio académico de Fidel Rosas - Informática, UDONE." />
+  <meta name="description" content="Portafolio de Fidel Rosas - Informática, UDONE." />
   <title>Fidel Rosas | Portafolio</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="container nav-content">
-      <a href="#inicio" class="logo">Rex<span>.dev</span></a>
+  <header class="barra-superior">
+    <div class="contenedor barra-contenido">
+      <a href="#inicio" class="marca">Rex<span>.dev</span></a>
       <nav aria-label="Navegación principal">
-        <ul class="nav-links">
+        <ul class="enlaces-nav">
           <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#github">GitHub</a></li>
           <li><a href="#tecnologias">Stack</a></li>
@@ -24,41 +24,41 @@
   </header>
 
   <main>
-    <!-- Hero -->
-    <section id="inicio" class="hero">
-      <div class="container hero-content">
-        <span class="badge">Informática • UDONE</span>
-        <h1>Hola, soy <span class="highlight">Fidel Rosas</span></h1>
-        <p class="hero-desc">
+    <!-- Inicio -->
+    <section id="inicio" class="portada">
+      <div class="contenedor">
+        <span class="etiqueta-rol">Informática • UDONE</span>
+        <h1>Hola, soy <span class="resaltado">Fidel Rosas</span></h1>
+        <p class="portada-texto">
           Estudiante de Informática en la Universidad de Oriente, Núcleo Nueva Esparta.
-          Este sitio reúne mi perfil actual, las tecnologías con las que he tenido contacto
-          y el inicio de mi espacio en GitHub.
+          Aquí está mi perfil actual, las cosas con las que he trabajado y mi enlace a GitHub.
         </p>
-        <div class="hero-actions">
-          <a href="#github" class="btn btn-primary">Ver GitHub</a>
-          <a href="#contacto" class="btn btn-secondary">Contacto</a>
+        <div class="acciones-portada">
+          <a href="#github" class="btn btn-principal">Ver GitHub</a>
+          <a href="#contacto" class="btn btn-secundario">Contacto</a>
         </div>
       </div>
     </section>
 
     <!-- Sobre mí -->
-    <section id="sobre-mi" class="section">
-      <div class="container">
-        <h2 class="section-title">Sobre mí</h2>
-        <div class="about-grid">
-          <div class="about-card">
+    <section id="sobre-mi" class="seccion">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Sobre mí</h2>
+        <div class="grilla-dos">
+          <div class="tarjeta-info">
             <h3>Etapa Actual</h3>
             <p>
-              Curso estudios de <strong>Informática en la UDONE</strong>, 
-              vengo de graduarme como <strong>Técnico Medio mención Informática</strong>, y también hice 3 meses de pasantías.
-              A lo largo de mi paso por la carrera he conocido distintos lenguajes y herramientas,
-              y actualmente estoy empezando a ordenar y centralizar mis cosas en GitHub.
+              Estudio <strong>Informática en la UDONE</strong>, me gradué de bachillerato como
+              <strong>Técnico Medio mención Informática</strong> y también hice unos meses de pasantías.
+              He tocado varios lenguajes y herramientas durante la carrera, aunque casi no subo cosas a GitHub.
             </p>
           </div>
-          <div class="about-card">
+          <div class="tarjeta-info">
             <h3>Enfoque</h3>
             <p>
-              Uso GitHub solo cuando hace falta y no tengo un historial armado ahí. La idea de este sitio es cumplir con lo pedido de forma sencilla.
+              La verdad casi no le meto mente a mantener repositorios por flojera con esa parte,
+              así que esto es solo para salir del paso de forma sencilla. Si más adelante toca subir
+              algo más, ya se verá.
             </p>
           </div>
         </div>
@@ -66,76 +66,74 @@
     </section>
 
     <!-- GitHub -->
-    <section id="github" class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <h2 class="section-title">GitHub</h2>
-            <p class="section-subtitle">
-              Mi cuenta en GitHub está en una etapa inicial, con este portafolio como uno de los primeros pasos visibles.
-            </p>
-          </div>
-
-          <div class="filter-bar" role="group" aria-label="Filtrar tarjetas">
-            <button class="filter-btn active" data-filter="todos">Todo</button>
-            <button class="filter-btn" data-filter="repos">Perfil y Repos</button>
-            <button class="filter-btn" data-filter="enfoque">Enfoque Actual</button>
-          </div>
+    <section id="github" class="seccion seccion-alterna">
+      <div class="contenedor">
+        <div>
+          <h2 class="titulo-seccion">GitHub</h2>
+          <p class="subtitulo-seccion">
+            Cuenta con poca actividad pública; este portafolio es prácticamente el inicio.
+          </p>
         </div>
 
-        <div class="projects-grid" id="projects-container">
-          <article class="project-card" data-category="repos">
-            <div class="project-top">
-              <span class="project-tag">GitHub</span>
-              <span class="project-context">Cuenta personal</span>
+        <div class="barra-filtros" role="group" aria-label="Filtrar tarjetas">
+          <button class="boton-filtro activo" data-filtro="todos">Todo</button>
+          <button class="boton-filtro" data-filtro="repos">Perfil y Repos</button>
+          <button class="boton-filtro" data-filtro="enfoque">Enfoque Actual</button>
+        </div>
+
+        <div class="grilla-proyectos" id="contenedor-proyectos">
+          <article class="tarjeta-proyecto" data-categoria="repos">
+            <div class="tarjeta-encabezado">
+              <span class="etiqueta-tipo">GitHub</span>
+              <span class="texto-contexto">Cuenta personal</span>
             </div>
             <h3>Perfil RexRoss</h3>
-            <p class="project-desc">
-              Espacio donde estoy comenzando a reunir mis repositorios y avances en control de versiones.
+            <p class="tarjeta-descripcion">
+              Mi cuenta en GitHub, donde está alojado este sitio y sin un historial grande de repositorios.
             </p>
-            <div class="tech-list">
+            <div class="lista-tecnologias">
               <span>Git</span>
               <span>GitHub</span>
             </div>
-            <div class="project-links">
+            <div class="enlace-tarjeta">
               <a href="https://github.com/RexRoss" target="_blank" rel="noopener noreferrer">Ir a GitHub →</a>
             </div>
           </article>
 
-          <article class="project-card" data-category="repos">
-            <div class="project-top">
-              <span class="project-tag">Web</span>
-              <span class="project-context">En Vercel</span>
+          <article class="tarjeta-proyecto" data-categoria="repos">
+            <div class="tarjeta-encabezado">
+              <span class="etiqueta-tipo">Web</span>
+              <span class="texto-contexto">En Vercel</span>
             </div>
             <h3>Portafolio Web</h3>
-            <p class="project-desc">
-              Página sencilla hecha con HTML, CSS y JavaScript, vinculada a GitHub y desplegada en Vercel.
+            <p class="tarjeta-descripcion">
+              Página sencilla en HTML, CSS y JavaScript vinculada a GitHub y subida en Vercel.
             </p>
-            <div class="tech-list">
+            <div class="lista-tecnologias">
               <span>HTML5</span>
               <span>CSS3</span>
               <span>JavaScript</span>
               <span>Vercel</span>
             </div>
-            <div class="project-links">
+            <div class="enlace-tarjeta">
               <a href="https://github.com/RexRoss?tab=repositories" target="_blank" rel="noopener noreferrer">Ver repositorios →</a>
             </div>
           </article>
 
-          <article class="project-card" data-category="enfoque">
-            <div class="project-top">
-              <span class="project-tag">Trayectoria</span>
-              <span class="project-context">Sin historial subido aún</span>
+          <article class="tarjeta-proyecto" data-categoria="enfoque">
+            <div class="tarjeta-encabezado">
+              <span class="etiqueta-tipo">Trayectoria</span>
+              <span class="texto-contexto">Sin subir</span>
             </div>
             <h3>Trabajos y Prácticas Previas</h3>
-            <p class="project-desc">
-              Aunque no cuento con repositorios antiguos subidos ni respaldados en GitHub, he trabajado con distintos lenguajes y herramientas durante la carrera.
+            <p class="tarjeta-descripcion">
+              He trabajado con distintos lenguajes y sistemas en materias y pruebas, pero no tengo ese historial subido en repositorios.
             </p>
-            <div class="tech-list">
+            <div class="lista-tecnologias">
               <span>Prácticas de clase</span>
-              <span>En organización</span>
+              <span>Sin subir</span>
             </div>
-            <div class="project-links">
+            <div class="enlace-tarjeta">
               <a href="#tecnologias">Ver herramientas →</a>
             </div>
           </article>
@@ -144,92 +142,92 @@
     </section>
 
     <!-- Tecnologías -->
-    <section id="tecnologias" class="section">
-      <div class="container">
-        <h2 class="section-title">Herramientas y Tecnologías</h2>
-        <p class="section-subtitle">
-          Pasa el cursor (o toca un logo en móvil) para ver el nombre de cada tecnología.
+    <section id="tecnologias" class="seccion">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Herramientas y Tecnologías</h2>
+        <p class="subtitulo-seccion">
+          Pasa el cursor (o toca en móvil) para ver el nombre de cada uno.
         </p>
-        <div class="skills-grid">
-          <div class="skill-group">
+        <div class="grilla-tres">
+          <div class="tarjeta-info">
             <h3>Lenguajes</h3>
-            <div class="logo-grid">
-              <button type="button" class="tech-logo-item" data-name="JavaScript" aria-label="JavaScript">
+            <div class="grilla-logos">
+              <button type="button" class="item-logo" data-nombre="JavaScript" aria-label="JavaScript">
                 <i class="devicon-javascript-plain colored"></i>
               </button>
-              <button type="button" class="tech-logo-item" data-name="TypeScript" aria-label="TypeScript">
+              <button type="button" class="item-logo" data-nombre="TypeScript" aria-label="TypeScript">
                 <i class="devicon-typescript-plain colored"></i>
               </button>
-              <button type="button" class="tech-logo-item" data-name="GDScript" aria-label="GDScript">
+              <button type="button" class="item-logo" data-nombre="GDScript" aria-label="GDScript">
                 <i class="devicon-godot-plain colored"></i>
               </button>
-              <button type="button" class="tech-logo-item" data-name="Python" aria-label="Python">
+              <button type="button" class="item-logo" data-nombre="Python" aria-label="Python">
                 <i class="devicon-python-plain colored"></i>
               </button>
-              <button type="button" class="tech-logo-item" data-name="SQL" aria-label="SQL">
+              <button type="button" class="item-logo" data-nombre="SQL" aria-label="SQL">
                 <i class="devicon-azuresqldatabase-plain colored"></i>
               </button>
-              <button type="button" class="tech-logo-item" data-name="C++" aria-label="C++">
+              <button type="button" class="item-logo" data-nombre="C++" aria-label="C++">
                 <i class="devicon-cplusplus-plain colored"></i>
               </button>
-              <button type="button" class="tech-logo-item" data-name="Haskell" aria-label="Haskell">
+              <button type="button" class="item-logo" data-nombre="Haskell" aria-label="Haskell">
                 <i class="devicon-haskell-plain colored"></i>
               </button>
-              <button type="button" class="tech-logo-item" data-name="Racket" aria-label="Racket">
-                <span class="logo-fallback">RKT</span>
+              <button type="button" class="item-logo" data-nombre="Racket" aria-label="Racket">
+                <span class="texto-logo-alterno">RKT</span>
               </button>
-              <button type="button" class="tech-logo-item" data-name="HTML5" aria-label="HTML5">
+              <button type="button" class="item-logo" data-nombre="HTML5" aria-label="HTML5">
                 <i class="devicon-html5-plain colored"></i>
               </button>
-              <button type="button" class="tech-logo-item" data-name="CSS3" aria-label="CSS3">
+              <button type="button" class="item-logo" data-nombre="CSS3" aria-label="CSS3">
                 <i class="devicon-css3-plain colored"></i>
               </button>
             </div>
           </div>
 
-          <div class="skill-group">
+          <div class="tarjeta-info">
             <h3>Backend y Bases de Datos</h3>
-            <div class="logo-grid">
-              <button type="button" class="tech-logo-item" data-name="Node.js" aria-label="Node.js">
+            <div class="grilla-logos">
+              <button type="button" class="item-logo" data-nombre="Node.js" aria-label="Node.js">
                 <i class="devicon-nodejs-plain colored"></i>
               </button>
-              <button type="button" class="tech-logo-item" data-name="NestJS" aria-label="NestJS">
+              <button type="button" class="item-logo" data-nombre="NestJS" aria-label="NestJS">
                 <i class="devicon-nestjs-original colored"></i>
               </button>
-              <button type="button" class="tech-logo-item" data-name="PostgreSQL" aria-label="PostgreSQL">
+              <button type="button" class="item-logo" data-nombre="PostgreSQL" aria-label="PostgreSQL">
                 <i class="devicon-postgresql-plain colored"></i>
               </button>
-              <button type="button" class="tech-logo-item" data-name="pgAdmin 4" aria-label="pgAdmin 4">
-                <span class="logo-fallback">pgAdmin</span>
+              <button type="button" class="item-logo" data-nombre="pgAdmin 4" aria-label="pgAdmin 4">
+                <span class="texto-logo-alterno">pgAdmin</span>
               </button>
-              <button type="button" class="tech-logo-item" data-name="APIs REST" aria-label="APIs REST">
-                <span class="logo-fallback">REST API</span>
+              <button type="button" class="item-logo" data-nombre="APIs REST" aria-label="APIs REST">
+                <span class="texto-logo-alterno">REST API</span>
               </button>
-              <button type="button" class="tech-logo-item" data-name="Postman" aria-label="Postman">
+              <button type="button" class="item-logo" data-nombre="Postman" aria-label="Postman">
                 <i class="devicon-postman-plain colored"></i>
               </button>
             </div>
           </div>
 
-          <div class="skill-group">
+          <div class="tarjeta-info">
             <h3>Redes, Hardware y Otros</h3>
-            <div class="logo-grid">
-              <button type="button" class="tech-logo-item" data-name="Git" aria-label="Git">
+            <div class="grilla-logos">
+              <button type="button" class="item-logo" data-nombre="Git" aria-label="Git">
                 <i class="devicon-git-plain colored"></i>
               </button>
-              <button type="button" class="tech-logo-item" data-name="GitHub" aria-label="GitHub">
+              <button type="button" class="item-logo" data-nombre="GitHub" aria-label="GitHub">
                 <i class="devicon-github-original"></i>
               </button>
-              <button type="button" class="tech-logo-item" data-name="Cisco Packet Tracer" aria-label="Cisco Packet Tracer">
-                <span class="logo-fallback">Packet Tracer</span>
+              <button type="button" class="item-logo" data-nombre="Cisco Packet Tracer" aria-label="Cisco Packet Tracer">
+                <span class="texto-logo-alterno">Packet Tracer</span>
               </button>
-              <button type="button" class="tech-logo-item" data-name="ESP32" aria-label="ESP32">
-                <span class="logo-fallback">ESP32</span>
+              <button type="button" class="item-logo" data-nombre="ESP32" aria-label="ESP32">
+                <span class="texto-logo-alterno">ESP32</span>
               </button>
-              <button type="button" class="tech-logo-item" data-name="Godot 4" aria-label="Godot 4">
+              <button type="button" class="item-logo" data-nombre="Godot 4" aria-label="Godot 4">
                 <i class="devicon-godot-plain colored"></i>
               </button>
-              <button type="button" class="tech-logo-item" data-name="Linux (eBPF)" aria-label="Linux (eBPF)">
+              <button type="button" class="item-logo" data-nombre="Linux (eBPF)" aria-label="Linux (eBPF)">
                 <i class="devicon-linux-plain colored"></i>
               </button>
             </div>
@@ -239,22 +237,22 @@
     </section>
 
     <!-- Contacto -->
-    <section id="contacto" class="section section-alt">
-      <div class="container contact-box">
-        <h2 class="section-title">Contacto</h2>
-        <p id="email-display">rex.ander.ross10@gmail.com</p>
-        <div class="contact-links">
-          <a href="https://github.com/RexRoss" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GitHub</a>
-          <a href="mailto:rex.ander.ross10@gmail.com" class="btn btn-secondary">Abrir Correo</a>
-          <button type="button" id="copy-email-btn" class="btn btn-secondary">Copiar Correo</button>
+    <section id="contacto" class="seccion seccion-alterna">
+      <div class="contenedor caja-contacto">
+        <h2 class="titulo-seccion">Contacto</h2>
+        <p id="correo-texto">rex.ander.ross10@gmail.com</p>
+        <div class="enlaces-contacto">
+          <a href="https://github.com/RexRoss" target="_blank" rel="noopener noreferrer" class="btn btn-principal">GitHub</a>
+          <a href="mailto:rex.ander.ross10@gmail.com" class="btn btn-secundario">Abrir Correo</a>
+          <button type="button" id="boton-copiar-correo" class="btn btn-secundario">Copiar Correo</button>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Fidel Rosas — Desplegado en Vercel.</p>
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <p>© <span id="año-actual"></span> Fidel Rosas — Desplegado en Vercel.</p>
     </div>
   </footer>
 

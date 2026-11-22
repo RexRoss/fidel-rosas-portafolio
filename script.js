@@ -1,66 +1,66 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Año automático en el footer
-  const yearSpan = document.getElementById("year");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
+  // Año actual en el footer
+  const spanAnio = document.getElementById("año-actual");
+  if (spanAnio) {
+    spanAnio.textContent = new Date().getFullYear();
   }
 
-  // Filtrado de tarjetas de proyectos
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const projectCards = document.querySelectorAll(".project-card");
+  // Filtrado de tarjetas
+  const botonesFiltro = document.querySelectorAll(".boton-filtro");
+  const tarjetas = document.querySelectorAll(".tarjeta-proyecto");
 
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      filterButtons.forEach((btn) => btn.classList.remove("active"));
-      button.classList.add("active");
+  botonesFiltro.forEach((boton) => {
+    boton.addEventListener("click", () => {
+      botonesFiltro.forEach((b) => b.classList.remove("activo"));
+      boton.classList.add("activo");
 
-      const selectedCategory = button.getAttribute("data-filter");
+      const filtro = boton.getAttribute("data-filtro");
 
-      projectCards.forEach((card) => {
-        const cardCategory = card.getAttribute("data-category");
-        if (selectedCategory === "todos" || cardCategory === selectedCategory) {
-          card.classList.remove("hidden");
+      tarjetas.forEach((tarjeta) => {
+        const categoria = tarjeta.getAttribute("data-categoria");
+        if (filtro === "todos" || categoria === filtro) {
+          tarjeta.classList.remove("oculto");
         } else {
-          card.classList.add("hidden");
+          tarjeta.classList.add("oculto");
         }
       });
     });
   });
 
-  // Mostrar nombre al tocar un logo en móvil / pantallas táctiles
-  const logoItems = document.querySelectorAll(".tech-logo-item");
+  // Mostrar nombre al tocar en móvil
+  const itemsLogo = document.querySelectorAll(".item-logo");
 
-  logoItems.forEach((item) => {
+  itemsLogo.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.stopPropagation();
-      const alreadyActive = item.classList.contains("active");
-      logoItems.forEach((other) => other.classList.remove("active"));
-      if (!alreadyActive) {
-        item.classList.add("active");
+      const yaActivo = item.classList.contains("activo");
+      itemsLogo.forEach((otro) => otro.classList.remove("activo"));
+      if (!yaActivo) {
+        item.classList.add("activo");
       }
     });
   });
 
   document.addEventListener("click", () => {
-    logoItems.forEach((item) => item.classList.remove("active"));
+    itemsLogo.forEach((item) => item.classList.remove("activo"));
   });
 
-  // Copiar correo al portapapeles
-  const copyBtn = document.getElementById("copy-email-btn");
-  const emailText = document.getElementById("email-display");
+  // Copiar correo
+  const btnCopiar = document.getElementById("boton-copiar-correo");
+  const textoCorreo = document.getElementById("correo-texto");
 
-  if (copyBtn && emailText) {
-    copyBtn.addEventListener("click", async () => {
-      const correo = emailText.textContent.trim();
+  if (btnCopiar && textoCorreo) {
+    btnCopiar.addEventListener("click", async () => {
+      const correo = textoCorreo.textContent.trim();
       try {
         await navigator.clipboard.writeText(correo);
-        const originalText = copyBtn.textContent;
-        copyBtn.textContent = "¡Copiado!";
+        const textoOriginal = btnCopiar.textContent;
+        btnCopiar.textContent = "Copiado";
         setTimeout(() => {
-          copyBtn.textContent = originalText;
+          btnCopiar.textContent = textoOriginal;
         }, 2000);
       } catch {
-        copyBtn.textContent = correo;
+        btnCopiar.textContent = correo;
       }
     });
   }
