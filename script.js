@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Año actual en el footer
+  // Año actual en el pie
   const spanAnio = document.getElementById("año-actual");
   if (spanAnio) {
     spanAnio.textContent = new Date().getFullYear();

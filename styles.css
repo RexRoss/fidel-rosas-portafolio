@@ -101,6 +101,12 @@ body {
   margin-bottom: 1rem;
 }
 
+.portada h1 small {
+  font-size: 1.25rem;
+  color: var(--texto-suave);
+  font-weight: 500;
+}
+
 .resaltado {
   color: var(--acento);
 }
